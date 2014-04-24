@@ -35,13 +35,18 @@ shinyUI(fluidPage(
       tabPanel("Introduction",
       	h1("Introduction:"),
       	 p("This app is built using RShiny to determine the accuracy of DigitalGlobe's HUGS algorithm for classifying building centroids in land parcels in Australia"),
-      	 p("Here's an explanation of whats going on"),
+      	 h3("Data in Table Form Tab:"),
+      	 p("This tab shows information for a given percentage of the largest parcels in the Gold Coast City shapefile that was provided.  To select what percentage you would like to see use the slider tab to the left and click the Update button.  The table allows you to sort the entries by any of the fields of interest"),
+      	 h3("Maps Tab:"),
+      	 p("The maps tab will show the polygon boundaries for the land parcels that are selected using the slider.  This requires a call to the google maps API and can take a moment to load."),
+      	 
       	 h3("Satellite Chip Tab:"),
-      	 p("There are quite a few chips corresponding to the top 10% of
+      	
+      	 p("There nearly 3000 chips corresponding to the top 10% of
       	 	parcel areas.  In order to avoid downloading each and every
       	 	image the satellite chip tab contains a call to the ChipAPI
-      	 	provided by Digital Globe, based on the ID of the parcel.  The ID
-      	 	is entered on the sidebar to the left and the image is retrieved.
+      	 	provided by Digital Globe.  The latitude and longitude of a parcel of interest is read from the data table tab and 
+      	entered on the sidebar to the left. The image is then retrieved through the API.
       	 	The speed of this is limited by the response time for the ChipAPI 
       	 	retrieval.")
       	 

@@ -44,8 +44,7 @@ shinyServer(function(input, output) {
 			)
 	})
 	
-	output$chipURL <- renderUI({   
-        HTML(paste("'<img src=\"http://dev1.tomnod.com/chip_api/chip/lat/",input$lat,"/lng/",input$lon,"\">'",sep=""))
+	output$chipURL <- renderUI({HTML(paste("'<img src=\"http://dev1.tomnod.com/chip_api/chip/lat/",input$lat,"/lng/",input$lon,"\">'",sep=""))
       }) 
 
 
